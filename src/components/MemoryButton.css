@@ -1,12 +1,12 @@
-.clear-btn {
+.memory-btn {
     height: 4em;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: lighter;
     font-size: 1.4em;
-    background-color: #e94225;
-    color: #000000;
+    background-color: #77cece;
+    color: #ffffff;
     flex: 1;
     outline: 1px solid #888888;
-  }
+}

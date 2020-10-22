@@ -9,6 +9,8 @@
 .calc-wrapper {
   width: 400px;
   height: 600px;
+  padding: 0.5em;
+  outline: 1px white;
 }
 
 .row {

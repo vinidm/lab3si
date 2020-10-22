@@ -2,7 +2,10 @@ import React, { Component } from "react";
 import "./App.css";
 import { Button } from "./components/Button";
 import { Input } from "./components/Input";
+import { Display } from "./components/Display";
 import { ClearButton } from "./components/ClearButton";
+import { SignalButton } from "./components/SignalButton";
+
 
 class App extends Component {
   constructor(props) {
@@ -20,7 +23,9 @@ class App extends Component {
   };
 
   signalInversor = val => {
-    this.setState({ currentOperand: '-'+this.state.currentOperand });
+    var newoperand = parseFloat(this.state.currentOperand);
+    newoperand = -newoperand
+    this.setState({ currentOperand: newoperand });
   };
 
   getOperation = val => {
@@ -56,8 +61,8 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <div className="calc-wrapper">
-          <Input input={(this.state.previousOperand+this.state.operation)}/>
+       <div className="calc-wrapper">
+          <Display display={(this.state.previousOperand+this.state.operation)}/>
           <Input input={this.state.currentOperand}/>
           <div className="row">
             <ClearButton handleClear={() => this.setState({ 
@@ -67,7 +72,7 @@ class App extends Component {
               })}>
               AC
             </ClearButton>
-            <Button handleClick={() => this.signalInversor()}>+/-</Button>
+            <SignalButton handleClick={() => this.signalInversor()}>+/-</SignalButton>
             <Button handleClick={() => this.handleEqual()}>=</Button>
           </div>
           <div className="row">
