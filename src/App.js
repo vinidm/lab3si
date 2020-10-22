@@ -230,9 +230,7 @@ class App extends Component {
           </div>
           <div className="row">
             <ClearButton handleClear={() => this.setState({ 
-              previousOperand: this.state.currentOperand,
-              currentOperand: '',
-              operation: ''
+              currentOperand: ''
               })}>
               AC
             </ClearButton>
